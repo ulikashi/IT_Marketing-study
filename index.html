@@ -1,0 +1,1211 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Boost Pro — Онлайн-курс по IT-маркетингу</title>
+  <meta name="description" content="Digital Boost Pro — практический онлайн-курс по IT-маркетингу: SEO, аналитика, performance, контент и AI-инструменты. Освой профессию за 30 дней." />
+  <meta name="keywords" content="IT-маркетинг, онлайн-курс, SEO, performance, digital, обучение" />
+  <meta name="theme-color" content="#1f4fff" />
+  <meta property="og:title" content="Digital Boost Pro — IT-маркетинг за 30 дней" />
+  <meta property="og:description" content="Практический курс с демо-уроком, тарифами и личным кабинетом." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ru_RU" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@700;800&display=swap" rel="stylesheet" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Digital Boost Pro",
+    "description": "Онлайн-курс по IT-маркетингу за 30 дней: SEO, аналитика, performance, контент и AI.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Digital Boost Academy",
+      "url": "https://example.com"
+    },
+    "educationalLevel": "Beginner to Intermediate",
+    "inLanguage": "ru",
+    "offers": [
+      {"@type": "Offer", "price": "5000", "priceCurrency": "RUB", "name": "Базовый"},
+      {"@type": "Offer", "price": "12000", "priceCurrency": "RUB", "name": "Про"},
+      {"@type": "Offer", "price": "25000", "priceCurrency": "RUB", "name": "VIP"}
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #080e28;
+      --surface: #121a42;
+      --surface-soft: #1a255b;
+      --card: rgba(17, 28, 76, 0.9);
+      --text: #f4f7ff;
+      --muted: #c5cfff;
+      --primary: #3f7bff;
+      --secondary: #7a4dff;
+      --accent: #00d4ff;
+      --success: #26de81;
+      --danger: #ff6b81;
+      --radius: 16px;
+      --shadow: 0 18px 45px rgba(5, 8, 20, 0.45);
+      --max: 1160px;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 12%, #2b3fbb 0%, transparent 35%),
+        radial-gradient(circle at 85% 8%, #6432d8 0%, transparent 32%),
+        linear-gradient(155deg, #0a1236 0%, #0b1030 45%, #070a1f 100%);
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: min(100% - 2rem, var(--max));
+      margin-inline: auto;
+    }
+
+    .section {
+      padding: 70px 0;
+      position: relative;
+    }
+
+    h1, h2, h3 {
+      font-family: "Manrope", sans-serif;
+      margin: 0 0 14px;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    h1 { font-size: clamp(2rem, 6vw, 4rem); }
+    h2 { font-size: clamp(1.7rem, 4.2vw, 2.8rem); }
+
+    p { margin: 0 0 1rem; color: var(--muted); }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 34px;
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 22px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: linear-gradient(120deg, var(--primary), var(--secondary));
+      box-shadow: 0 12px 28px rgba(63, 123, 255, 0.45);
+    }
+
+    .btn-secondary {
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(10px);
+      background: rgba(8, 12, 36, 0.75);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .header-inner {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .logo {
+      font-family: "Manrope", sans-serif;
+      font-weight: 800;
+      font-size: 1.08rem;
+      letter-spacing: 0.02em;
+    }
+
+    .logo span { color: var(--accent); }
+
+    .nav {
+      display: none;
+      gap: 16px;
+      color: #dde4ff;
+      font-size: 0.92rem;
+    }
+
+    .hero {
+      min-height: min(86vh, 760px);
+      display: grid;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 42px;
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      overflow: hidden;
+    }
+
+    .hero-media video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.32;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(8, 12, 36, 0.5), rgba(8, 12, 36, 0.95));
+      z-index: -1;
+    }
+
+    .hero-content {
+      max-width: 740px;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      margin-bottom: 18px;
+      font-size: 0.9rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .countdown {
+      margin-top: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: rgba(10, 20, 55, 0.8);
+      border: 1px solid rgba(105, 130, 255, 0.35);
+      font-weight: 600;
+    }
+
+    .countdown strong { color: var(--accent); }
+
+    .grid-modules {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr;
+    }
+
+    .module {
+      background: var(--card);
+      border: 1px solid rgba(133, 154, 255, 0.28);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: var(--shadow);
+      transition: transform .25s ease;
+    }
+
+    .module:hover { transform: translateY(-4px); }
+
+    .module-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .module-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(130deg, rgba(63, 123, 255, 0.26), rgba(122, 77, 255, 0.3));
+    }
+
+    .progress-wrap {
+      margin-top: 10px;
+      background: rgba(255, 255, 255, 0.12);
+      border-radius: 999px;
+      height: 8px;
+      overflow: hidden;
+    }
+
+    .progress {
+      width: 0;
+      height: 100%;
+      background: linear-gradient(90deg, #00d4ff, #3f7bff);
+      transition: width 1s ease;
+    }
+
+    .pricing-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .price-card {
+      background: var(--card);
+      border: 1px solid rgba(150, 168, 255, 0.28);
+      border-radius: var(--radius);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform .25s ease, border-color .25s ease;
+      position: relative;
+    }
+
+    .price-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(0, 212, 255, 0.7);
+    }
+
+    .badge-popular {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: .76rem;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: linear-gradient(120deg, #00d4ff, #3f7bff);
+      color: #00142f;
+      font-weight: 800;
+    }
+
+    .price {
+      font-size: 2rem;
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .feature-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      color: #e8edff;
+      font-size: .94rem;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      color: var(--success);
+      margin-right: 8px;
+      font-weight: 700;
+    }
+
+    .compare-wrap {
+      margin-top: 22px;
+      border: 1px solid rgba(140, 160, 255, 0.24);
+      border-radius: 12px;
+      overflow: auto;
+      background: rgba(10, 16, 46, 0.85);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 580px;
+      color: #edf1ff;
+      font-size: .92rem;
+    }
+
+    th, td {
+      padding: 11px 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    th:first-child, td:first-child { text-align: left; }
+
+    .reviews-shell {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--radius);
+      border: 1px solid rgba(151, 171, 255, 0.3);
+      background: rgba(10, 16, 44, 0.78);
+      box-shadow: var(--shadow);
+    }
+
+    .reviews-track {
+      display: flex;
+      transition: transform .4s ease;
+      touch-action: pan-y;
+    }
+
+    .review {
+      min-width: 100%;
+      padding: 22px;
+      display: grid;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .review-video iframe,
+    .demo-embed iframe {
+      width: 100%;
+      border: 0;
+      aspect-ratio: 16/9;
+      border-radius: 12px;
+      background: #05060f;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .carousel-controls {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .arrow {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .demo-box {
+      background: rgba(11, 20, 56, 0.86);
+      border: 1px solid rgba(145, 166, 255, 0.3);
+      border-radius: var(--radius);
+      padding: 18px;
+      display: grid;
+      gap: 16px;
+    }
+
+    .registration-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .form-card {
+      background: rgba(12, 22, 62, 0.88);
+      border-radius: var(--radius);
+      border: 1px solid rgba(146, 166, 255, 0.32);
+      padding: 18px;
+    }
+
+    .field {
+      display: grid;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .field label {
+      font-size: .9rem;
+      color: #e5ebff;
+      font-weight: 600;
+    }
+
+    .field input,
+    .field select {
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border-radius: 10px;
+      padding: 11px 12px;
+      font: inherit;
+      outline: none;
+      transition: border-color .2s ease;
+    }
+
+    .field input:focus,
+    .field select:focus { border-color: var(--accent); }
+
+    .error {
+      font-size: .83rem;
+      color: var(--danger);
+      min-height: 1.1em;
+    }
+
+    .faq-list {
+      display: grid;
+      gap: 10px;
+      max-width: 860px;
+      margin-inline: auto;
+    }
+
+    .faq-item {
+      border-radius: 12px;
+      background: rgba(10, 18, 52, 0.85);
+      border: 1px solid rgba(146, 167, 255, 0.32);
+      overflow: hidden;
+    }
+
+    .faq-btn {
+      width: 100%;
+      background: none;
+      border: 0;
+      text-align: left;
+      color: #fff;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+      padding: 16px;
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .faq-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .25s ease;
+      padding: 0 16px;
+    }
+
+    .faq-item.active .faq-content {
+      max-height: 140px;
+      padding-bottom: 14px;
+    }
+
+    .site-footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.16);
+      padding: 24px 0 40px;
+      background: rgba(6, 10, 28, 0.88);
+    }
+
+    .footer-inner {
+      display: grid;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .socials a {
+      display: inline-flex;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      font-size: .88rem;
+    }
+
+    .modal {
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      display: grid;
+      place-items: center;
+      background: rgba(2, 5, 18, 0.7);
+      padding: 16px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .25s ease;
+    }
+
+    .modal.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-card {
+      width: min(100%, 720px);
+      background: #101b48;
+      border-radius: 16px;
+      border: 1px solid rgba(161, 180, 255, 0.3);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 0;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.14);
+      cursor: pointer;
+    }
+
+    .dashboard {
+      display: grid;
+      gap: 12px;
+    }
+
+    .dash-row {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (min-width: 760px) {
+      .nav { display: flex; }
+      .grid-modules { grid-template-columns: repeat(2, 1fr); }
+      .pricing-grid { grid-template-columns: repeat(3, 1fr); }
+      .review {
+        grid-template-columns: 1.2fr 1fr;
+        padding: 28px;
+      }
+      .registration-grid { grid-template-columns: 1.15fr .85fr; }
+      .demo-box {
+        grid-template-columns: 1.1fr .9fr;
+        align-items: center;
+      }
+      .footer-inner {
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        text-align: left;
+      }
+      .footer-inner > :last-child { text-align: right; }
+    }
+
+    @media (min-width: 1024px) {
+      .section { padding: 90px 0; }
+      .grid-modules { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">Digital <span>Boost Pro</span></a>
+      <nav class="nav" aria-label="Навигация по разделам">
+        <a href="#program">Программа</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <button class="btn btn-secondary" type="button" data-open="cabinetModal">Войти</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero section" id="top">
+    <div class="hero-media" aria-hidden="true">
+      <video autoplay muted loop playsinline preload="none" poster="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1400&q=60">
+        <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=0b983316debe4e6f5f2f08bdf50ff8b6e9890cf4&profile_id=139&oauth2_token_id=57447761" type="video/mp4" />
+      </video>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="container hero-content reveal">
+      <span class="hero-badge">Старт потока: 20 апреля 2026 • Онлайн</span>
+      <h1>Освой IT-маркетинг за 30 дней</h1>
+      <p>Практический интенсив: SEO, аналитика, контент, рекламные воронки и AI-инструменты. 8 модулей, менторы из продуктовых компаний и готовое портфолио.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#pricing">Записаться сейчас</a>
+        <button class="btn btn-secondary" type="button" data-open="videoModal">Смотреть промо</button>
+      </div>
+      <div class="countdown" aria-live="polite">
+        До конца набора: <strong id="countdown">3д 12ч 00м</strong>
+      </div>
+    </div>
+  </section>
+
+  <!-- Program -->
+  <section class="section" id="program">
+    <div class="container">
+      <h2 class="section-title reveal">Программа курса</h2>
+      <p class="section-subtitle reveal">8 модулей с живой практикой и проверкой домашних заданий.</p>
+      <div class="grid-modules">
+        <article class="module reveal">
+          <div class="module-head"><div class="module-icon">1</div><h3>Модуль 1: SEO-основы</h3></div>
+          <p>Кластеризация семантики, технический аудит и рост органического трафика.</p>
+          <div class="progress-wrap"><div class="progress" data-progress="92"></div></div>
+        </article>
+        <article class="module reveal">
+          <div class="module-head"><div class="module-icon">2</div><h3>Модуль 2: Контент и SMM</h3></div>
+          <p>Контент-матрица, tone of voice, вовлекающие воронки для IT-продукта.</p>
+          <div class="progress-wrap"><div class="progress" data-progress="88"></div></div>
+        </article>
+        <article class="module reveal">
+          <div class="module-head"><div class="module-icon">3</div><h3>Модуль 3: Web-аналитика</h3></div>
+          <p>GA4, Яндекс Метрика, UTM и дашборды для продуктовых решений.</p>
+          <div class="progress-wrap"><div class="progress" data-progress="85"></div></div>
+        </article>
+        <article class="module reveal">
+          <div class="module-head"><div class="module-icon">4</div><h3>Модуль 4: Performance</h3></div>
+          <p>Запуск рекламы в VK Ads и Яндекс Директ, CAC/LTV и оптимизация.</p>
+          <div class="progress-wrap"><div class="progress" data-progress="90"></div></div>
+        </article>
+        <article class="module reveal">
+          <div class="module-head"><div class="module-icon">5</div><h3>Модуль 5: CRM-маркетинг</h3></div>
+          <p>Email и push-цепочки, сегментация и сценарии удержания пользователей.</p>
+          <div class="progress-wrap"><div class="progress" data-progress="78"></div></div>
+        </article>
+        <article class="module reveal">
+          <div class="module-head"><div class="module-icon">6</div><h3>Модуль 6: AI в маркетинге</h3></div>
+          <p>Генерация гипотез, креативов и автоматизация рутины с AI-сервисами.</p>
+          <div class="progress-wrap"><div class="progress" data-progress="95"></div></div>
+        </article>
+        <article class="module reveal">
+          <div class="module-head"><div class="module-icon">7</div><h3>Модуль 7: Growth-подход</h3></div>
+          <p>Тестирование гипотез, A/B-эксперименты и масштабирование каналов.</p>
+          <div class="progress-wrap"><div class="progress" data-progress="82"></div></div>
+        </article>
+        <article class="module reveal">
+          <div class="module-head"><div class="module-icon">8</div><h3>Модуль 8: Карьера</h3></div>
+          <p>Подготовка резюме, кейсов и собеседований в IT-компаниях.</p>
+          <div class="progress-wrap"><div class="progress" data-progress="86"></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <h2 class="section-title reveal">Тарифы</h2>
+      <p class="section-subtitle reveal">Выберите формат обучения под вашу цель и темп.</p>
+
+      <div class="pricing-grid">
+        <article class="price-card reveal">
+          <h3>Базовый</h3>
+          <div class="price">5 000₽</div>
+          <ul class="feature-list">
+            <li>Доступ к урокам 3 месяца</li>
+            <li>Домашние задания</li>
+            <li>Чат студентов</li>
+          </ul>
+          <button class="btn btn-primary buy-btn" type="button" data-plan="Базовый">Купить</button>
+        </article>
+
+        <article class="price-card reveal" style="transform: scale(1.02); border-color: rgba(0, 212, 255, 0.68);">
+          <span class="badge-popular">Самый популярный</span>
+          <h3>Про</h3>
+          <div class="price">12 000₽</div>
+          <ul class="feature-list">
+            <li>Все из Базового</li>
+            <li>Проверка ДЗ от ментора</li>
+            <li>2 карьерные консультации</li>
+          </ul>
+          <button class="btn btn-primary buy-btn" type="button" data-plan="Про">Купить</button>
+        </article>
+
+        <article class="price-card reveal">
+          <h3>VIP</h3>
+          <div class="price">25 000₽</div>
+          <ul class="feature-list">
+            <li>Все из Про</li>
+            <li>Личный куратор</li>
+            <li>Индивидуальный проект</li>
+          </ul>
+          <button class="btn btn-primary buy-btn" type="button" data-plan="VIP">Купить</button>
+        </article>
+      </div>
+
+      <div class="compare-wrap reveal" aria-label="Сравнение тарифов">
+        <table>
+          <thead>
+            <tr>
+              <th>Опции</th>
+              <th>Базовый</th>
+              <th>Про</th>
+              <th>VIP</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Проверка ДЗ</td><td>—</td><td>✓</td><td>✓</td></tr>
+            <tr><td>Карьерный трек</td><td>—</td><td>✓</td><td>✓</td></tr>
+            <tr><td>Личный куратор</td><td>—</td><td>—</td><td>✓</td></tr>
+            <tr><td>Сертификат</td><td>✓</td><td>✓</td><td>✓</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="section" id="reviews">
+    <div class="container">
+      <h2 class="section-title reveal">Видео-отзывы выпускников</h2>
+      <p class="section-subtitle reveal">Короткие истории студентов, которые сменили карьерный трек.</p>
+
+      <div class="reviews-shell reveal" aria-roledescription="carousel">
+        <div class="reviews-track" id="reviewsTrack">
+          <article class="review">
+            <div class="review-video">
+              <iframe loading="lazy" src="https://www.youtube.com/embed/9No-FiEInLA" title="Отзыв 1" allowfullscreen></iframe>
+            </div>
+            <div>
+              <p>«После курса устроилась junior digital-специалистом в IT-стартап, выросла в доходе на 60%.»</p>
+              <div class="review-author">
+                <img class="avatar" loading="lazy" src="https://i.pravatar.cc/100?img=32" alt="Аватар Марии" />
+                <div><strong>Мария, Казань</strong><br><small>ex-SMM, теперь IT Marketing</small></div>
+              </div>
+            </div>
+          </article>
+          <article class="review">
+            <div class="review-video">
+              <iframe loading="lazy" src="https://www.youtube.com/embed/fn3KWM1kuAw" title="Отзыв 2" allowfullscreen></iframe>
+            </div>
+            <div>
+              <p>«Наконец разобрался с воронками и аналитикой. Через 2 месяца начал вести B2B-проекты на фрилансе.»</p>
+              <div class="review-author">
+                <img class="avatar" loading="lazy" src="https://i.pravatar.cc/100?img=12" alt="Аватар Никиты" />
+                <div><strong>Никита, Екатеринбург</strong><br><small>фрилансер, B2B lead-gen</small></div>
+              </div>
+            </div>
+          </article>
+          <article class="review">
+            <div class="review-video">
+              <iframe loading="lazy" src="https://www.youtube.com/embed/oHg5SJYRHA0" title="Отзыв 3" allowfullscreen></iframe>
+            </div>
+            <div>
+              <p>«С нуля собрала performance-кампанию и защитила проект перед командой продукта.»</p>
+              <div class="review-author">
+                <img class="avatar" loading="lazy" src="https://i.pravatar.cc/100?img=5" alt="Аватар Елены" />
+                <div><strong>Елена, Санкт-Петербург</strong><br><small>маркетолог в EdTech</small></div>
+              </div>
+            </div>
+          </article>
+          <article class="review">
+            <div class="review-video">
+              <iframe loading="lazy" src="https://www.youtube.com/embed/3JZ_D3ELwOQ" title="Отзыв 4" allowfullscreen></iframe>
+            </div>
+            <div>
+              <p>«Курс дал системное мышление: метрики, гипотезы, отчеты для руководства — все стало проще.»</p>
+              <div class="review-author">
+                <img class="avatar" loading="lazy" src="https://i.pravatar.cc/100?img=47" alt="Аватар Артема" />
+                <div><strong>Артем, Москва</strong><br><small>growth-маркетолог</small></div>
+              </div>
+            </div>
+          </article>
+          <article class="review">
+            <div class="review-video">
+              <iframe loading="lazy" src="https://www.youtube.com/embed/ScMzIvxBSi4" title="Отзыв 5" allowfullscreen></iframe>
+            </div>
+            <div>
+              <p>«Прокачал навыки SEO и автоматизации. Получил оффер в продуктовую команду через месяц после выпуска.»</p>
+              <div class="review-author">
+                <img class="avatar" loading="lazy" src="https://i.pravatar.cc/100?img=21" alt="Аватар Игоря" />
+                <div><strong>Игорь, Новосибирск</strong><br><small>SEO specialist</small></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="arrow" id="prevReview" aria-label="Предыдущий отзыв">‹</button>
+        <button class="arrow" id="nextReview" aria-label="Следующий отзыв">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Demo -->
+  <section class="section" id="demo">
+    <div class="container">
+      <div class="demo-box reveal">
+        <div>
+          <h2>Бесплатный урок #1</h2>
+          <p>Разбор реальной IT-воронки: как увеличить конверсию с лендинга в заявку за 14 дней.</p>
+          <button class="btn btn-primary" type="button" data-open="videoModal">Смотреть</button>
+        </div>
+        <div class="demo-embed">
+          <iframe loading="lazy" src="https://www.youtube.com/embed/2Q5cY7lA5f4" title="Демо-урок IT-маркетинг" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration -->
+  <section class="section" id="register">
+    <div class="container">
+      <h2 class="section-title reveal">Регистрация на курс</h2>
+      <p class="section-subtitle reveal">Оставьте контакты, и мы пришлем программу, расписание и бонусный гайд.</p>
+
+      <div class="registration-grid">
+        <form class="form-card reveal" id="enrollForm" novalidate>
+          <div class="field">
+            <label for="name">Имя</label>
+            <input id="name" name="name" type="text" placeholder="Например, Анна" required />
+            <div class="error" id="nameError"></div>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+            <div class="error" id="emailError"></div>
+          </div>
+          <div class="field">
+            <label for="phone">Телефон</label>
+            <input id="phone" name="phone" type="tel" placeholder="+7 (999) 123-45-67" required />
+            <div class="error" id="phoneError"></div>
+          </div>
+          <div class="field">
+            <label for="plan">Тариф</label>
+            <select id="plan" name="plan" required>
+              <option value="">Выберите тариф</option>
+              <option value="Базовый">Базовый — 5 000₽</option>
+              <option value="Про">Про — 12 000₽</option>
+              <option value="VIP">VIP — 25 000₽</option>
+            </select>
+            <div class="error" id="planError"></div>
+          </div>
+          <button class="btn btn-primary" type="submit">Отправить заявку</button>
+        </form>
+
+        <aside class="form-card reveal">
+          <h3>Почему сейчас</h3>
+          <p>В цену потока включены 2 дополнительных воркшопа по AI-маркетингу и шаблоны отчетности для работодателя.</p>
+          <p><strong>Контакты:</strong><br>+7 (495) 000-00-00<br>hello@digitalboostpro.ru<br>Москва, Пресненская набережная, 8</p>
+          <button class="btn btn-secondary" type="button" data-open="cabinetModal">Открыть личный кабинет</button>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <h2 class="section-title reveal">FAQ</h2>
+      <p class="section-subtitle reveal">Ответы на самые частые вопросы перед стартом обучения.</p>
+
+      <div class="faq-list reveal">
+        <article class="faq-item">
+          <button class="faq-btn" type="button">Как получить сертификат?<span>+</span></button>
+          <div class="faq-content"><p>Нужно пройти все модули и защитить итоговый проект. Сертификат выдается в электронном виде.</p></div>
+        </article>
+        <article class="faq-item">
+          <button class="faq-btn" type="button">Можно ли учиться без опыта?<span>+</span></button>
+          <div class="faq-content"><p>Да, программа рассчитана на новичков. В первом модуле объясняются базовые термины и инструменты.</p></div>
+        </article>
+        <article class="faq-item">
+          <button class="faq-btn" type="button">Сколько времени в неделю нужно?<span>+</span></button>
+          <div class="faq-content"><p>В среднем 6-8 часов в неделю: видеоуроки, практика и разборы с куратором.</p></div>
+        </article>
+        <article class="faq-item">
+          <button class="faq-btn" type="button">Есть ли рассрочка?<span>+</span></button>
+          <div class="faq-content"><p>Да, можно оформить рассрочку до 6 месяцев через партнерские сервисы оплаты.</p></div>
+        </article>
+        <article class="faq-item">
+          <button class="faq-btn" type="button">Когда открывается доступ к урокам?<span>+</span></button>
+          <div class="faq-content"><p>Сразу после подтверждения оплаты. Вы получите письмо с инструкцией и входом в кабинет.</p></div>
+        </article>
+        <article class="faq-item">
+          <button class="faq-btn" type="button">Будет помощь с трудоустройством?<span>+</span></button>
+          <div class="faq-content"><p>Да, в тарифах Про и VIP есть карьерный трек: резюме, портфолио, подготовка к интервью.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="logo">Digital <span>Boost Pro</span></div>
+      <div class="socials" aria-label="Социальные сети">
+        <a href="#" aria-label="Telegram">Telegram</a>
+        <a href="#" aria-label="VK">VK</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+      <small>© 2026 Digital Boost Academy. Все права защищены.</small>
+    </div>
+  </footer>
+
+  <!-- Modal: Promo Video -->
+  <div class="modal" id="videoModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="close" type="button" data-close>&times;</button>
+      <h3>Промо курса Digital Boost Pro</h3>
+      <div class="demo-embed" style="margin-top:12px;">
+        <iframe loading="lazy" src="https://www.youtube.com/embed/2Q5cY7lA5f4" title="Промо-видео курса" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Success -->
+  <div class="modal" id="successModal" aria-hidden="true">
+    <div class="modal-card" style="max-width:520px; text-align:center;">
+      <button class="close" type="button" data-close>&times;</button>
+      <h3>Заявка отправлена</h3>
+      <p>Спасибо! Мы свяжемся с вами в течение рабочего дня и отправим доступ к материалам.</p>
+      <button class="btn btn-primary" type="button" data-close>Понятно</button>
+    </div>
+  </div>
+
+  <!-- Modal: Fake Dashboard -->
+  <div class="modal" id="cabinetModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="close" type="button" data-close>&times;</button>
+      <h3>Личный кабинет студента</h3>
+      <p>Демо-интерфейс: отслеживание прогресса и ближайших уроков.</p>
+      <div class="dashboard">
+        <div class="dash-row">
+          <strong>Ваш прогресс: 68%</strong>
+          <div class="progress-wrap" style="margin-top:8px;"><div class="progress" style="width:68%"></div></div>
+        </div>
+        <div class="dash-row"><strong>Следующий урок:</strong> Модуль 5 — CRM и retention (сегодня, 19:00 МСК)</div>
+        <div class="dash-row"><strong>Домашние задания:</strong> 2 на проверке, 1 возвращено с комментариями</div>
+        <div class="dash-row"><strong>Вебинары недели:</strong> «AI-инструменты в контенте» и «Юнит-экономика без боли»</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Smooth reveal animations on scroll
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Animate module progress bars when visible
+    const progressObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const bar = entry.target;
+          bar.style.width = `${bar.dataset.progress}%`;
+          progressObserver.unobserve(bar);
+        }
+      });
+    }, { threshold: 0.45 });
+
+    document.querySelectorAll('.progress[data-progress]').forEach(bar => progressObserver.observe(bar));
+
+    // Countdown timer (3 days 12 hours from now)
+    const countdownEl = document.getElementById('countdown');
+    const targetDate = new Date(Date.now() + ((3 * 24 + 12) * 60 * 60 * 1000));
+
+    function updateCountdown() {
+      const diff = targetDate - Date.now();
+      if (diff <= 0) {
+        countdownEl.textContent = 'Набор завершен';
+        return;
+      }
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
+      countdownEl.textContent = `${d}д ${h}ч ${String(m).padStart(2, '0')}м`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 60000);
+
+    // Reviews carousel with arrows + swipe
+    const track = document.getElementById('reviewsTrack');
+    const slides = Array.from(track.children);
+    const prevBtn = document.getElementById('prevReview');
+    const nextBtn = document.getElementById('nextReview');
+    let currentIndex = 0;
+    let startX = 0;
+    let endX = 0;
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    });
+
+    track.addEventListener('touchstart', (e) => {
+      startX = e.changedTouches[0].clientX;
+    }, { passive: true });
+
+    track.addEventListener('touchend', (e) => {
+      endX = e.changedTouches[0].clientX;
+      const delta = endX - startX;
+      if (Math.abs(delta) < 45) return;
+      if (delta < 0) currentIndex = (currentIndex + 1) % slides.length;
+      if (delta > 0) currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    }, { passive: true });
+
+    // Generic modal controls
+    const body = document.body;
+
+    function openModal(id) {
+      const modal = document.getElementById(id);
+      if (!modal) return;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modal) {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      if (!document.querySelector('.modal.open')) body.style.overflow = '';
+    }
+
+    document.querySelectorAll('[data-open]').forEach(btn => {
+      btn.addEventListener('click', () => openModal(btn.dataset.open));
+    });
+
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target.hasAttribute('data-close')) closeModal(modal);
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      document.querySelectorAll('.modal.open').forEach(closeModal);
+    });
+
+    // Prefill plan from pricing cards
+    const planSelect = document.getElementById('plan');
+    document.querySelectorAll('.buy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        planSelect.value = btn.dataset.plan;
+        document.getElementById('register').scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+        if (!isActive) item.classList.add('active');
+      });
+    });
+
+    // Form validation + success modal
+    const form = document.getElementById('enrollForm');
+    const fields = {
+      name: document.getElementById('name'),
+      email: document.getElementById('email'),
+      phone: document.getElementById('phone'),
+      plan: document.getElementById('plan')
+    };
+
+    function setError(field, message) {
+      document.getElementById(`${field}Error`).textContent = message;
+    }
+
+    function clearErrors() {
+      ['name', 'email', 'phone', 'plan'].forEach(key => setError(key, ''));
+    }
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      clearErrors();
+
+      let valid = true;
+      const name = fields.name.value.trim();
+      const email = fields.email.value.trim();
+      const phone = fields.phone.value.trim();
+      const plan = fields.plan.value;
+
+      if (name.length < 2) {
+        setError('name', 'Введите имя (минимум 2 символа).');
+        valid = false;
+      }
+
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        setError('email', 'Укажите корректный email.');
+        valid = false;
+      }
+
+      if (!/^(\+7|8)\s?\(?\d{3}\)?\s?\d{3}[-\s]?\d{2}[-\s]?\d{2}$/.test(phone.replace(/\s+/g, ' '))) {
+        setError('phone', 'Введите телефон в формате +7 (999) 123-45-67.');
+        valid = false;
+      }
+
+      if (!plan) {
+        setError('plan', 'Выберите тариф.');
+        valid = false;
+      }
+
+      if (!valid) return;
+
+      form.reset();
+      openModal('successModal');
+    });
+  </script>
+</body>
+</html>
