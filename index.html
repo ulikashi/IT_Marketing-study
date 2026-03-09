@@ -204,27 +204,49 @@
       padding: 16px;
       display: grid;
       gap: 12px;
-      align-content: end;
+      grid-template-rows: 1fr auto;
     }
 
-    .hero-lines {
-      position: absolute;
-      inset: 0;
-      background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
-      background-size: 34px 34px;
-      mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,1) 30%);
-      pointer-events: none;
+    .hero-photo {
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      min-height: 190px;
     }
 
-    .floating {
-      position: relative;
-      border-radius: 14px;
-      background: rgba(8, 13, 27, 0.62);
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      padding: 12px;
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
-    .floating strong { color: #fff; }
+    .hero-metrics {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .metric {
+      border-radius: 12px;
+      background: rgba(8, 13, 27, 0.74);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 11px;
+    }
+
+    .metric strong {
+      display: block;
+      color: #fff;
+      font-size: 1.1rem;
+      font-family: "Unbounded", sans-serif;
+      line-height: 1.2;
+      margin-bottom: 2px;
+    }
+
+    .metric small {
+      color: #d5defc;
+      font-size: 0.84rem;
+      line-height: 1.35;
+    }
 
     .ticker {
       margin-top: 22px;
@@ -381,6 +403,7 @@
       display: grid;
       gap: 12px;
       grid-template-columns: 1fr;
+      align-items: stretch;
     }
 
     .case-card {
@@ -389,6 +412,9 @@
       border: 1px solid rgba(255, 255, 255, 0.15);
       padding: 16px;
       box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
 
     .case-top {
@@ -414,7 +440,7 @@
 
     .result-chip {
       display: inline-block;
-      margin-top: 8px;
+      margin-top: auto;
       border-radius: 999px;
       padding: 6px 10px;
       background: rgba(255, 205, 110, 0.18);
@@ -422,6 +448,7 @@
       color: #ffe6b2;
       font-size: .83rem;
       font-weight: 600;
+      align-self: flex-start;
     }
 
     .registration-grid {
@@ -668,11 +695,16 @@
         <div class="countdown" aria-live="polite">До конца набора: <strong id="countdown">3д 12ч 00м</strong></div>
       </div>
 
-      <div class="hero-canvas reveal" aria-hidden="true">
-        <div class="hero-lines"></div>
-        <div class="floating"><strong>Спринт-формат</strong><br><small>4 недели, 8 модулей, 27 практических задач</small></div>
-        <div class="floating"><strong>Карьерный трек</strong><br><small>Резюме, портфолио и подготовка к интервью</small></div>
-        <div class="floating"><strong>Метрики роста</strong><br><small>CAC, LTV, CR, retention — на практике</small></div>
+      <div class="hero-canvas reveal">
+        <div class="hero-photo">
+          <img loading="lazy" src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=1400&q=80" alt="Аналитика маркетинговой команды на рабочем столе" />
+        </div>
+        <div class="hero-metrics">
+          <div class="metric"><strong>27 задач</strong><small>для портфолио за поток</small></div>
+          <div class="metric"><strong>4 недели</strong><small>до первого кейса</small></div>
+          <div class="metric"><strong>8 модулей</strong><small>по ключевым каналам</small></div>
+          <div class="metric"><strong>1:1 карьерно</strong><small>в Про и VIP</small></div>
+        </div>
       </div>
     </div>
 
